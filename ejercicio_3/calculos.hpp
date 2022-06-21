@@ -31,13 +31,14 @@ void init () {
 void fms_calculadora(){
 switch(estado){
     case ACUMULAR:
-    while(counter < N)
-    {
       acum=acum+sgn[counter];
       counter++;
-    }
-    estado=PROMEDIAR;
-
+      if(counter==N)
+      {
+        counter=0;
+          estado=PROMEDIAR;
+      }else
+      
     break;
     case PROMEDIAR:
     avg=acum/N;
