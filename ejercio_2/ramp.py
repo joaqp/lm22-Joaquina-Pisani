@@ -12,3 +12,7 @@ plt.ylabel('Amplitude ----> ')
 plt.title('Unit ramp Signal')
 plt.grid(True)
 plt.show()
+
+sourceFile = open('.\ejercio_2\sgn.h', 'w')
+print(*y, sep = ",", file = sourceFile)
+sourceFile.close()
