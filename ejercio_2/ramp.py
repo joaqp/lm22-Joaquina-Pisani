@@ -2,9 +2,12 @@ import numpy as np
 import csv
 import matplotlib.pyplot as plt
 
-y = np.random.randint(1, 3300, 64)
-y=np.sort(y)
-    
+y=[0]
+
+for i in range(1, 64):
+    y.append(y[i-1]+int((3300/64)))
+
+
 print(list(y))
 plt.stem(y, y)
 plt.xlabel('  n--->  ')
